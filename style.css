@@ -1,0 +1,51 @@
+
+/* 11주차 추가 기능 */
+
+/* 영화 개수와 정렬 선택 영역 */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* 영화 개수 */
+#count {
+  margin-right: auto;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffd166;
+}
+
+/* 정렬 선택 상자 */
+.toolbar select {
+  padding: 7px 12px;
+  border: 1px solid #666;
+  border-radius: 6px;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+}
+
+/* 정렬 글자 */
+.toolbar label {
+  color: #fff;
+}
+
+/* 평점 8점 이상인 영화의 배지 */
+.card.hot .badge {
+  background: crimson;
+  color: #fff;
+}
+
+/* 모바일 화면 */
+@media (max-width: 500px) {
+  .toolbar {
+    flex-wrap: wrap;
+  }
+
+  .toolbar select {
+    max-width: 140px;
+  }
+}
