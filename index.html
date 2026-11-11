@@ -41,6 +41,22 @@
     </div>
 
     <!-- 영화 카드는 JavaScript가 생성 -->
+    
+<div class="toolbar">
+  <p id="count"></p>
+
+  <label for="sort">정렬</label>
+
+  <select id="sort" onchange="applySort()">
+    <option value="rating">평점순</option>
+    <option value="year">최신 개봉순</option>
+    <option value="title">제목순</option>
+  </select>
+</div>
+
+<section class="board" id="board">
+</section>
+
     <section class="board" id="board">
     </section>
 
