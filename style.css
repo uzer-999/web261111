@@ -1,51 +1,224 @@
 
-/* 11주차 추가 기능 */
+/* 전체 기본 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* 영화 개수와 정렬 선택 영역 */
+body {
+  background-color: #121212;
+  color: white;
+  font-family: Arial, "Malgun Gothic", sans-serif;
+}
+
+/* 상단 메뉴 */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background-color: #1b1b1b;
+}
+
+.top h1 {
+  font-size: 25px;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ffd166;
+}
+
+/* 소개 영역 */
+.hero {
+  text-align: center;
+  padding: 65px 20px;
+  background-color: #222;
+}
+
+.hero h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #bbb;
+}
+
+/* 메인 영역 */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 25px;
+}
+
+/* 개수 및 정렬 */
 .toolbar {
   display: flex;
   align-items: center;
   gap: 12px;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
-/* 영화 개수 */
 #count {
   margin-right: auto;
-  font-size: 1.1rem;
-  font-weight: bold;
   color: #ffd166;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-/* 정렬 선택 상자 */
 .toolbar select {
-  padding: 7px 12px;
-  border: 1px solid #666;
-  border-radius: 6px;
-  background: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
   color: #222;
   cursor: pointer;
 }
 
-/* 정렬 글자 */
 .toolbar label {
-  color: #fff;
+  color: white;
 }
 
-/* 평점 8점 이상인 영화의 배지 */
+/* 영화 보드 */
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+
+/* 영화 카드 */
+.card {
+  position: relative;
+  background-color: white;
+  color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+}
+
+/* 포스터 */
+.poster-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.poster {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card:hover .poster {
+  transform: scale(1.05);
+}
+
+/* 평점 */
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ffd166;
+  color: #222;
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* 8점 이상 빨간색 */
 .card.hot .badge {
   background: crimson;
   color: #fff;
 }
 
-/* 모바일 화면 */
-@media (max-width: 500px) {
-  .toolbar {
-    flex-wrap: wrap;
+/* 영화 정보 */
+.info {
+  padding: 15px;
+}
+
+.info h2 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.year {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.overview {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* 소개 영역 */
+#about {
+  margin-top: 60px;
+  padding: 30px;
+  background-color: #222;
+  border-radius: 8px;
+  line-height: 1.8;
+}
+
+#about h2 {
+  margin-bottom: 15px;
+}
+
+/* 푸터 */
+footer {
+  margin-top: 60px;
+  padding: 30px 15px;
+  text-align: center;
+  background-color: #1b1b1b;
+  color: #aaa;
+  font-size: 12px;
+  line-height: 2;
+}
+
+/* 태블릿 */
+@media (max-width: 900px) {
+  .board {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 모바일 */
+@media (max-width: 600px) {
+  .board {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
-  .toolbar select {
-    max-width: 140px;
+  .top {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h2 {
+    font-size: 23px;
+  }
+
+  main {
+    padding: 0 15px;
   }
 }
