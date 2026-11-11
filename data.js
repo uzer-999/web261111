@@ -1,7 +1,4 @@
 
-// data.js
-// 내가 고른 영화 6편
-
 const movies = [
 
   {
@@ -19,7 +16,7 @@ const movies = [
     date: "2014-11-06",
     rating: 8.5,
     poster: "/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
-    overview: "인류의 미래를 위해 우주 너머 새로운 터전을 찾아 떠난다."
+    overview: "인류의 미래를 위해 우주로 떠나는 사람들의 이야기."
   },
 
   {
@@ -28,7 +25,7 @@ const movies = [
     date: "2008-07-18",
     rating: 8.5,
     poster: "/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
-    overview: "고담시를 지키려는 배트맨과 조커의 치열한 대결."
+    overview: "배트맨과 조커의 치열한 대결을 그린 영화."
   },
 
   {
@@ -37,7 +34,7 @@ const movies = [
     date: "2019-05-30",
     rating: 8.5,
     poster: "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
-    overview: "전혀 다른 두 가족의 만남이 예상치 못한 사건으로 이어진다."
+    overview: "서로 다른 두 가족의 만남을 그린 영화."
   },
 
   {
@@ -46,7 +43,7 @@ const movies = [
     date: "1999-10-15",
     rating: 8.4,
     poster: "/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg",
-    overview: "일상의 틀을 벗어나려는 남자가 비밀스러운 모임을 만든다."
+    overview: "일상에서 벗어나려는 남자의 이야기를 그린 영화."
   },
 
   {
@@ -55,7 +52,7 @@ const movies = [
     date: "2020-08-26",
     rating: 7.2,
     poster: "/k68nPLbIST6NP96JmTxmZijEvCA.jpg",
-    overview: "시간의 흐름을 거슬러 미래의 위협에 맞서는 임무가 시작된다."
+    overview: "시간의 흐름을 거슬러 미래의 위협에 맞서는 영화."
   }
 
 ];
